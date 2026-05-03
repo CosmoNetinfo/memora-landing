@@ -14,9 +14,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bianco);color:var(--testo
 nav{padding:1.5rem 2.5rem;background:var(--bianco);border-bottom:1px solid var(--lilla-mid);display:flex;justify-content:space-between;align-items:center}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--prugna);text-decoration:none}
 .container{max-width:900px;margin:4rem auto;padding:4rem;background:white;box-shadow:0 10px 40px rgba(0,0,0,0.05);border-radius:24px;border:1px solid var(--lilla-mid)}
-h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--prugna);margin-bottom:2rem;text-align:center}
+h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--prugna);margin-bottom:1rem;text-align:center}
+.last-update{text-align:center;color:var(--testo-soft);font-size:.9rem;margin-bottom:3rem}
+h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--prugna);margin-top:2.5rem;border-bottom:1px solid var(--lilla-mid);padding-bottom:.5rem}
+h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--prugna);margin-top:1.5rem}
+p, li{color:var(--testo-soft);margin-bottom:1rem}
+.special-box{margin-top:2rem;padding:2rem;background:var(--lilla);border-radius:16px;border:1px solid var(--lilla-mid)}
 .back-link{display:block;text-align:center;margin-top:4rem;color:var(--viola);text-decoration:none;font-weight:500}
-.iubenda-container{margin-top:3rem;min-height:400px}
 footer{background:var(--prugna);color:white;padding:3rem 2rem;text-align:center;margin-top:6rem}
 </style>
 </head>
@@ -28,21 +32,54 @@ footer{background:var(--prugna);color:white;padding:3rem 2rem;text-align:center;
 
 <div class="container">
   <h1>Privacy Policy</h1>
-  
-  <div class="iubenda-container">
-    <iframe src="https://www.iubenda.com/privacy-policy/72223879" style="width:100%;height:700px;border:none;" title="Privacy Policy"></iframe>
-  </div>
+  <p class="last-update">Ultima modifica: 3 maggio 2026</p>
 
-  <div style="margin-top: 2rem; padding: 1.5rem; background: #fff; border-radius: 12px; border: 1px solid var(--lilla-mid);">
-    <h3 style="font-family: 'Cormorant Garamond', serif; color: var(--prugna); margin-bottom: 1rem;">Integrazione Dati Sanitari & Cloud</h3>
-    <p style="font-size: 0.9rem; color: var(--testo-soft);">In aggiunta a quanto sopra indicato tramite Iubenda, si specifica che Memora tratta dati relativi alla salute (mood tracking, agenda clinica) per finalità di assistenza al paziente. I dati sono archiviati in modo sicuro su infrastruttura <strong>Supabase</strong> con politiche di accesso RLS (Row Level Security) attive a livello di database.</p>
-  </div>
+  <section>
+    <p>Benvenuto nella privacy policy di <strong>memora-landing-bay.vercel.app/</strong>. Questa policy ti aiuterà a comprendere quali dati raccogliamo, perché li raccogliamo e quali sono i tuoi diritti in merito.</p>
+  </section>
+
+  <section class="special-box">
+    <h3>🔐 Integrazione Dati Sanitari & Sicurezza Cloud</h3>
+    <p>In aggiunta a quanto indicato dai generatori automatici, si specifica che <strong>Memora</strong> tratta dati sensibili relativi alla salute (mood tracking, agenda clinica, note assistenziali) esclusivamente per finalità di assistenza al paziente e supporto al caregiver.</p>
+    <p>I dati sono archiviati in modo sicuro su infrastruttura <strong>Supabase</strong> (PostgreSQL) con politiche di accesso <strong>RLS (Row Level Security)</strong> attive. Questo garantisce che i dati sanitari non escano mai dall'istanza protetta e siano accessibili solo agli utenti autorizzati.</p>
+  </section>
+
+  <h2>Titolare del Trattamento dei Dati</h2>
+  <p><strong>Daniele Spalletti</strong><br>Via del Risaro 42, 00127 Vitinia (RM)<br>Email: <a href="mailto:admindany@gmail.com">admindany@gmail.com</a></p>
+
+  <h2>Tipologie di Dati raccolti</h2>
+  <p>Fra i Dati Personali raccolti da questa Applicazione, in modo autonomo o tramite terze parti, ci sono: Dati di utilizzo, Strumenti di Tracciamento, Email.</p>
+
+  <h2>Modalità e luogo del trattamento</h2>
+  <h3>Modalità di trattamento</h3>
+  <p>Il Titolare adotta le opportune misure di sicurezza volte ad impedire l’accesso, la divulgazione, la modifica o la distruzione non autorizzate dei Dati Personali. Il trattamento viene effettuato mediante strumenti informatici e/o telematici.</p>
+  
+  <h3>Luogo</h3>
+  <p>I Dati sono trattati presso le sedi operative del Titolare ed in ogni altro luogo in cui le parti coinvolte nel trattamento siano localizzate.</p>
+
+  <h2>Finalità del Trattamento</h2>
+  <p>I Dati dell’Utente sono raccolti per consentire al Titolare di fornire il Servizio, adempiere agli obblighi di legge, rispondere a richieste o azioni esecutive e tutelare i propri diritti.</p>
+  <ul>
+    <li>Contattare l'Utente (Modulo di contatto)</li>
+    <li>Hosting ed infrastruttura backend (Vercel Inc.)</li>
+    <li>Visualizzazione di contenuti da piattaforme esterne (Google Fonts)</li>
+  </ul>
+
+  <h2>Diritti dell’Utente (GDPR)</h2>
+  <p>Gli Utenti possono esercitare determinati diritti con riferimento ai Dati trattati dal Titolare:</p>
+  <ul>
+    <li>Revocare il consenso in ogni momento</li>
+    <li>Opporsi al trattamento dei propri Dati</li>
+    <li>Accedere ai propri Dati e chiederne la rettificazione</li>
+    <li>Ottenere la cancellazione o rimozione dei propri Dati Personali</li>
+    <li>Proporre reclamo all’autorità di controllo competente</li>
+  </ul>
 
   <a href="/" class="back-link">← Torna alla Home</a>
 </div>
 
 <footer>
-  <p>© 2026 Memora — Gestione Dati Personali</p>
+  <p>© 2026 Memora — Daniele Spalletti</p>
 </footer>
 
 </body>
