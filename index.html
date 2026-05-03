@@ -64,7 +64,9 @@ section{padding:6rem 2rem}
 .screenshots{background:var(--lilla-mid);overflow:hidden}
 .screenshots-row{display:flex;gap:1.5rem;margin-top:3rem;overflow-x:auto;padding-bottom:1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--viola) transparent}
 .screenshot-card{flex-shrink:0;width:220px;background:white;border-radius:20px;padding:1.2rem;text-align:center;border:1px solid rgba(156,105,167,.15);box-shadow:0 4px 20px rgba(74,48,79,.06)}
-.screenshot-mockup{width:100%;aspect-ratio:9/16;background:linear-gradient(145deg,var(--lilla) 0%,var(--lilla-mid) 100%);border-radius:12px;margin-bottom:.8rem;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.screenshot-mockup{width:100%;aspect-ratio:9/16;background:linear-gradient(145deg,var(--lilla) 0%,var(--lilla-mid) 100%);border-radius:12px;margin-bottom:.8rem;display:flex;align-items:center;justify-content:center;font-size:2rem;overflow:hidden}
+.screenshot-mockup img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.screenshot-card:hover .screenshot-mockup img{transform:scale(1.05)}
 .screenshot-card h4{font-size:.82rem;font-weight:500;color:var(--prugna)}
 .screenshot-card p{font-size:.75rem;color:var(--testo-soft);margin-top:.2rem}
 .tester{background:white}
@@ -232,11 +234,11 @@ footer{background:#1A0F1D;padding:2.5rem 2rem;display:flex;flex-wrap:wrap;align-
     <h2 class="section-title">Semplice per <em>design</em>.</h2>
     <p class="section-desc">Ogni schermata è progettata con un solo principio: meno scelte cognitive, più autonomia reale per l'utente.</p>
     <div class="screenshots-row">
-      <div class="screenshot-card"><div class="screenshot-mockup">🔑</div><h4>Login</h4><p>"Bentornat*" — inclusivo dal primo secondo</p></div>
-      <div class="screenshot-card"><div class="screenshot-mockup">🏠</div><h4>Home Paziente</h4><p>Agenda, umore e pillola di benessere</p></div>
-      <div class="screenshot-card"><div class="screenshot-mockup">💬</div><h4>Chat Vocale</h4><p>Waveform dinamica, nessun testo da digitare</p></div>
-      <div class="screenshot-card"><div class="screenshot-mockup">👤</div><h4>Profilo</h4><p>Attività recenti e impostazioni</p></div>
-      <div class="screenshot-card"><div class="screenshot-mockup">🐛</div><h4>Debug Panel</h4><p>Report tecnico con un tap</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup"><img src="/assets/img/login.png" alt="Login" onerror="this.style.display='none'; this.parentElement.innerHTML='🔑'"></div><h4>Login</h4><p>"Bentornat*" — inclusivo dal primo secondo</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup"><img src="/assets/img/home.png" alt="Home" onerror="this.style.display='none'; this.parentElement.innerHTML='🏠'"></div><h4>Home Paziente</h4><p>Agenda, umore e pillola di benessere</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup"><img src="/assets/img/chat.png" alt="Chat" onerror="this.style.display='none'; this.parentElement.innerHTML='💬'"></div><h4>Chat Vocale</h4><p>Waveform dinamica, nessun testo da digitare</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup"><img src="/assets/img/profile.png" alt="Profilo" onerror="this.style.display='none'; this.parentElement.innerHTML='👤'"></div><h4>Profilo</h4><p>Attività recenti e impostazioni</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup"><img src="/assets/img/debug.png" alt="Debug" onerror="this.style.display='none'; this.parentElement.innerHTML='🐛'"></div><h4>Debug Panel</h4><p>Report tecnico con un tap</p></div>
     </div>
     <p style="margin-top:1.5rem;font-size:.82rem;color:var(--testo-soft)">← Scorri per vedere tutte le schermate</p>
   </div>
