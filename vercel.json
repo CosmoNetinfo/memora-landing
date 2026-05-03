@@ -3,6 +3,7 @@
   "rewrites": [
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/cookie", "destination": "/cookie.html" },
-    { "source": "/termini", "destination": "/termini.html" }
+    { "source": "/termini", "destination": "/termini.html" },
+    { "source": "/sicurezza", "destination": "/sicurezza.html" }
   ]
 }

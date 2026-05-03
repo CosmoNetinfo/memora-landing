@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sicurezza Dati — Memora</title>
+<link rel="icon" href="/favicon.png">
+<script type="text/javascript" src="https://embeds.iubenda.com/widgets/c33918d2-a02c-4e17-8a13-9485d0588c56.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--viola:#9C69A7;--prugna:#4A304F;--lilla:#F7F3FA;--lilla-mid:#EDE4F3;--bianco:#FFFFFF;--testo:#2D1F30;--testo-soft:#6B5270;--accent:#C49FD0;--verde:#5DB07F}
+body{font-family:'DM Sans',sans-serif;background:var(--bianco);color:var(--testo);line-height:1.6;margin:0}
+nav{padding:1.5rem 2.5rem;background:var(--bianco);border-bottom:1px solid var(--lilla-mid);display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--prugna);text-decoration:none}
+.container{max-width:850px;margin:4rem auto;padding:0 2rem}
+h1{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--prugna);margin-bottom:1.5rem;line-height:1.1}
+h1 em{font-style:italic;color:var(--viola)}
+.badge{display:inline-block;background:rgba(93,176,127,.12);color:#2D6B4A;padding:.4rem 1rem;border-radius:50px;font-size:.8rem;font-weight:500;margin-bottom:2rem}
+h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--prugna);margin-top:3rem;margin-bottom:1rem}
+p{color:var(--testo-soft);font-size:1.05rem;margin-bottom:1.5rem}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:3rem 0}
+.tech-card{background:var(--lilla);padding:2rem;border-radius:20px;border:1px solid var(--lilla-mid)}
+.tech-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--prugna);margin-bottom:.8rem}
+.tech-card p{font-size:.9rem;margin-bottom:0}
+.back-link{display:inline-block;margin-top:3rem;color:var(--viola);text-decoration:none;font-weight:500}
+footer{background:var(--prugna);color:white;padding:3rem 2rem;text-align:center;margin-top:6rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">🧠 Memora</a>
+</nav>
+
+<div class="container">
+  <div class="badge">Protezione di Grado Sanitario</div>
+  <h1>La sicurezza dei <em>dati sensibili</em> al centro.</h1>
+  
+  <p>Memora è stata progettata seguendo il principio della <strong>Privacy by Design</strong>. Sappiamo che i dati che ci affidi sono estremamente personali e preziosi, per questo utilizziamo le tecnologie più avanzate per garantirne l'integrità e la riservatezza.</p>
+
+  <div class="tech-grid">
+    <div class="tech-card">
+      <h3>PostgreSQL & RLS</h3>
+      <p>Utilizziamo il Row Level Security (RLS) a livello di database. Questo significa che ogni riga di dati è protetta da regole matematiche che impediscono a chiunque (anche ad altri utenti dell'app) di accedere a informazioni non autorizzate.</p>
+    </div>
+    <div class="tech-card">
+      <h3>Istanza Supabase Dedicata</h3>
+      <p>I dati sanitari, i messaggi vocali e i profili clinici non escono mai dall'istanza Supabase dedicata. Non utilizziamo server di terze parti per il processamento dei dati sensibili.</p>
+    </div>
+    <div class="tech-card">
+      <h3>Crittografia in Transito</h3>
+      <p>Ogni comunicazione tra il tuo dispositivo e i nostri sistemi avviene tramite protocolli HTTPS/TLS criptati a 256 bit, lo stesso standard utilizzato dalle applicazioni bancarie.</p>
+    </div>
+  </div>
+
+  <h2>Architettura dei Dati</h2>
+  <p>A differenza delle applicazioni tradizionali che filtrano i dati tramite il codice del frontend, Memora implementa la sicurezza direttamente nel "cuore" del sistema: il database PostgreSQL. Questo garantisce che, anche in caso di bug nell'interfaccia, i dati rimangano inaccessibili a chi non ha i permessi corretti.</p>
+
+  <h2>Conformità GDPR</h2>
+  <p>Tutti i server di archiviazione sono situati all'interno dell'Unione Europea, garantendo il pieno rispetto del Regolamento UE 2016/679 (GDPR).</p>
+
+  <a href="/" class="back-link">← Torna alla Home</a>
+</div>
+
+<footer>
+  <p>© 2026 Memora — Infrastruttura Protetta</p>
+</footer>
+
+</body>
+</html>
