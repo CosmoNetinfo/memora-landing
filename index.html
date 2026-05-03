@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Memora — l'app italiana per pazienti Alzheimer, caregiver e medici. Agenda real-time, mood tracker, messaggi vocali. Cerchiamo tester e finanziatori.">
+<title>Memora — Assistenza Alzheimer Digitale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--viola:#9C69A7;--prugna:#4A304F;--lilla:#F7F3FA;--lilla-mid:#EDE4F3;--bianco:#FFFFFF;--testo:#2D1F30;--testo-soft:#6B5270;--accent:#C49FD0;--verde:#5DB07F}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bianco);color:var(--testo);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(156,105,167,0.12)}
+.nav-logo{display:flex;align-items:center;gap:.6rem;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--prugna);letter-spacing:.02em}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{text-decoration:none;color:var(--testo-soft);font-size:.88rem;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:var(--viola)}
+.nav-cta{background:var(--viola)!important;color:white!important;padding:.55rem 1.4rem;border-radius:50px;font-weight:500!important;transition:background .2s,transform .15s!important}
+.nav-cta:hover{background:var(--prugna)!important;transform:translateY(-1px)}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 2rem 5rem;background:linear-gradient(160deg,var(--lilla) 0%,#fff 50%,var(--lilla-mid) 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(156,105,167,.10) 0%,transparent 70%);top:-100px;right:-150px;pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(156,105,167,.12);border:1px solid rgba(156,105,167,.25);color:var(--prugna);padding:.4rem 1rem;border-radius:50px;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2rem}
+.hero-badge::before{content:'●';color:var(--verde);font-size:.6rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,5.5rem);font-weight:300;line-height:1.05;color:var(--prugna);margin-bottom:.3rem}
+.hero h1 em{font-style:italic;color:var(--viola)}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,3vw,1.7rem);font-weight:300;color:var(--testo-soft);margin-bottom:1.8rem;line-height:1.4}
+.hero-desc{max-width:560px;font-size:1.02rem;color:var(--testo-soft);line-height:1.7;margin-bottom:3rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn-primary{background:var(--prugna);color:white;padding:.9rem 2.2rem;border-radius:50px;text-decoration:none;font-weight:500;font-size:.95rem;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-primary:hover{background:var(--viola);transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:var(--prugna);padding:.9rem 2.2rem;border-radius:50px;text-decoration:none;font-weight:500;font-size:.95rem;border:1.5px solid var(--viola);transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-secondary:hover{background:var(--lilla);transform:translateY(-2px)}
+.hero-credits{margin-top:3.5rem;font-size:.8rem;color:var(--testo-soft);opacity:.7}
+.hero-credits a{color:var(--viola);text-decoration:none}
+.stats{background:var(--prugna);padding:3.5rem 2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:300;color:var(--accent);line-height:1}
+.stat-label{font-size:.82rem;color:rgba(255,255,255,.65);margin-top:.4rem;letter-spacing:.04em}
+section{padding:6rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--viola);margin-bottom:.8rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:300;color:var(--prugna);line-height:1.15;margin-bottom:1.2rem}
+.section-title em{font-style:italic;color:var(--viola)}
+.section-desc{color:var(--testo-soft);line-height:1.75;font-size:1rem;max-width:600px}
+.roles{background:var(--lilla)}
+.roles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;margin-top:3.5rem}
+.role-card{background:white;border-radius:16px;padding:2rem 1.8rem;border:1px solid rgba(156,105,167,.12);transition:transform .2s,box-shadow .2s}
+.role-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(74,48,79,.10)}
+.role-icon{font-size:2rem;margin-bottom:1rem}
+.role-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--prugna);margin-bottom:.6rem}
+.role-desc{font-size:.88rem;color:var(--testo-soft);line-height:1.65}
+.role-features{list-style:none;margin-top:1rem}
+.role-features li{font-size:.82rem;color:var(--testo-soft);padding:.3rem 0;border-bottom:1px solid var(--lilla);display:flex;align-items:center;gap:.5rem}
+.role-features li::before{content:'→';color:var(--viola);font-size:.75rem;flex-shrink:0}
+.features{background:white}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3.5rem}
+.feature-item{display:flex;gap:1.2rem;align-items:flex-start}
+.feature-icon{width:44px;height:44px;border-radius:12px;background:var(--lilla);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.feature-text h3{font-size:.95rem;font-weight:500;color:var(--prugna);margin-bottom:.3rem}
+.feature-text p{font-size:.85rem;color:var(--testo-soft);line-height:1.6}
+.screenshots{background:var(--lilla-mid);overflow:hidden}
+.screenshots-row{display:flex;gap:1.5rem;margin-top:3rem;overflow-x:auto;padding-bottom:1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--viola) transparent}
+.screenshot-card{flex-shrink:0;width:220px;background:white;border-radius:20px;padding:1.2rem;text-align:center;border:1px solid rgba(156,105,167,.15);box-shadow:0 4px 20px rgba(74,48,79,.06)}
+.screenshot-mockup{width:100%;aspect-ratio:9/16;background:linear-gradient(145deg,var(--lilla) 0%,var(--lilla-mid) 100%);border-radius:12px;margin-bottom:.8rem;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.screenshot-card h4{font-size:.82rem;font-weight:500;color:var(--prugna)}
+.screenshot-card p{font-size:.75rem;color:var(--testo-soft);margin-top:.2rem}
+.tester{background:white}
+.tester-box{background:linear-gradient(135deg,var(--prugna) 0%,#6B3D78 100%);border-radius:24px;padding:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem;position:relative;overflow:hidden}
+.tester-box::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);top:-100px;right:-100px}
+.tester-left h2{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:white;margin-bottom:1rem;line-height:1.2}
+.tester-left h2 em{font-style:italic;color:var(--accent)}
+.tester-left p{color:rgba(255,255,255,.75);font-size:.93rem;line-height:1.7;margin-bottom:2rem}
+.tester-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.tester-tag{background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);padding:.3rem .9rem;border-radius:50px;font-size:.78rem;border:1px solid rgba(255,255,255,.2)}
+.btn-white{background:white;color:var(--prugna);padding:.9rem 2rem;border-radius:50px;text-decoration:none;font-weight:500;font-size:.92rem;display:inline-flex;align-items:center;gap:.5rem;transition:transform .15s,box-shadow .15s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.tester-right{position:relative;z-index:1}
+.tester-steps{list-style:none}
+.tester-steps li{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
+.step-num{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:500;color:white;flex-shrink:0}
+.step-text{color:rgba(255,255,255,.8);font-size:.88rem;line-height:1.5;padding-top:.3rem}
+.step-text strong{color:white}
+.investors{background:var(--lilla)}
+.investors-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
+.investor-card{background:white;border-radius:20px;padding:2.5rem;border:1px solid rgba(156,105,167,.15);transition:transform .2s}
+.investor-card:hover{transform:translateY(-3px)}
+.investor-type{display:inline-block;font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .8rem;border-radius:50px;margin-bottom:1.2rem}
+.type-private{background:rgba(156,105,167,.12);color:var(--prugna)}
+.type-public{background:rgba(93,176,127,.12);color:#2D6B4A}
+.investor-card h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--prugna);margin-bottom:.8rem}
+.investor-card p{font-size:.88rem;color:var(--testo-soft);line-height:1.7;margin-bottom:1.5rem}
+.investor-list{list-style:none}
+.investor-list li{font-size:.83rem;color:var(--testo-soft);padding:.4rem 0;border-bottom:1px solid var(--lilla);display:flex;align-items:center;gap:.6rem}
+.investor-list li::before{content:'↗';color:var(--viola);font-size:.75rem}
+.legal{background:white}
+.legal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3rem}
+.legal-card{padding:1.8rem;border:1px solid rgba(156,105,167,.15);border-radius:16px;text-align:center}
+.legal-icon{font-size:1.8rem;margin-bottom:.8rem}
+.legal-card h4{font-size:.9rem;font-weight:500;color:var(--prugna);margin-bottom:.5rem}
+.legal-card p{font-size:.8rem;color:var(--testo-soft);line-height:1.6}
+.legal-card a{color:var(--viola);text-decoration:none;font-size:.8rem}
+.contact{background:var(--prugna);padding:5rem 2rem;text-align:center}
+.contact h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;color:white;margin-bottom:1rem}
+.contact h2 em{font-style:italic;color:var(--accent)}
+.contact p{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:2.5rem}
+.contact-email{display:inline-flex;align-items:center;gap:.8rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:white;padding:1rem 2rem;border-radius:12px;font-size:1rem;text-decoration:none;letter-spacing:.01em;transition:background .2s}
+.contact-email:hover{background:rgba(255,255,255,.18)}
+.contact-note{color:rgba(255,255,255,.4);font-size:.78rem;margin-top:1.5rem}
+footer{background:#1A0F1D;padding:2.5rem 2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:rgba(255,255,255,.6)}
+.footer-brand strong{color:white}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,.4);text-decoration:none;font-size:.8rem;transition:color .2s}
+.footer-links a:hover{color:var(--accent)}
+.footer-copy{color:rgba(255,255,255,.25);font-size:.75rem;width:100%;text-align:center;margin-top:.5rem}
+@media(max-width:768px){nav{padding:1rem 1.2rem}.nav-links{display:none}.tester-box{grid-template-columns:1fr;padding:2rem}.investors-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}footer{flex-direction:column;text-align:center}.footer-links{justify-content:center}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge,.hero h1,.hero-sub,.hero-desc,.hero-actions{opacity:0;animation:fadeUp .7s ease forwards}
+.hero h1{animation-delay:.1s}.hero-sub{animation-delay:.2s}.hero-desc{animation-delay:.3s}.hero-actions{animation-delay:.4s}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>🧠</span> Memora</div>
+  <div class="nav-links">
+    <a href="#ruoli">Funzionalità</a>
+    <a href="#tester">Diventa Tester</a>
+    <a href="#investitori">Investitori</a>
+    <a href="#legale">Privacy</a>
+    <a href="#contatti" class="nav-cta">Contattaci</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Beta Live — Cerca Tester</div>
+  <h1>La cura<br><em>comincia</em><br>da qui.</h1>
+  <p class="hero-sub">Supporto digitale per pazienti Alzheimer,<br>caregiver e operatori sanitari.</p>
+  <p class="hero-desc">Memora connette pazienti, famiglie e medici in un ecosistema pensato per la cura quotidiana. Agenda real-time, mood tracker clinico, messaggi vocali e monitoraggio remoto — tutto installabile su qualsiasi dispositivo.</p>
+  <div class="hero-actions">
+    <a href="https://alzheimerapp-chi.vercel.app/" target="_blank" rel="noopener" class="btn-primary">🚀 Prova l'app ora</a>
+    <a href="#contatti" class="btn-secondary">📩 Contatta il team</a>
+  </div>
+  <p class="hero-credits">Sviluppata da Daniele Spalletti &amp; Michele Mosca per <a href="https://www.cosmonet.info" target="_blank">cosmonet.info</a><br>Design ispirato a <a href="https://www.airalzh.it" target="_blank" rel="noopener">Airalzh Onlus</a></p>
+</section>
+
+<div class="stats">
+  <div><div class="stat-num">1,2M</div><div class="stat-label">Persone con demenza in Italia</div></div>
+  <div><div class="stat-num">4</div><div class="stat-label">Ruoli utente distinti</div></div>
+  <div><div class="stat-num">0€</div><div class="stat-label">Costo di accesso alla beta</div></div>
+  <div><div class="stat-num">PWA</div><div class="stat-label">Installabile senza store</div></div>
+</div>
+
+<section class="roles" id="ruoli">
+  <div class="container">
+    <div class="section-label">Chi usa Memora</div>
+    <h2 class="section-title">Un'app, <em>quattro ruoli</em>.</h2>
+    <p class="section-desc">Ogni utente accede a una dashboard personalizzata con permessi definiti a livello di database. Nessun dato viene condiviso tra ruoli non autorizzati.</p>
+    <div class="roles-grid">
+      <div class="role-card">
+        <div class="role-icon">🧓</div>
+        <div class="role-name">Il Paziente</div>
+        <p class="role-desc">Interfaccia ridotta all'essenziale per chi ha difficoltà cognitive o motorie.</p>
+        <ul class="role-features">
+          <li>Agenda giornaliera farmaci e attività</li>
+          <li>Mood Tracker con un tap</li>
+          <li>Pillola di benessere quotidiana</li>
+          <li>Tasto SOS emergenze</li>
+          <li>Messaggi vocali</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">👨‍👩‍👧</div>
+        <div class="role-name">Il Familiare</div>
+        <p class="role-desc">Monitoraggio remoto in tempo reale senza dover telefonare.</p>
+        <ul class="role-features">
+          <li>Gestione agenda del paziente</li>
+          <li>Sincronizzazione live bidirezionale</li>
+          <li>Stato presenza online</li>
+          <li>Storico attività completate</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">🩺</div>
+        <div class="role-name">Il Medico</div>
+        <p class="role-desc">Strumenti clinici per monitorare il paziente nel tempo anche da remoto.</p>
+        <ul class="role-features">
+          <li>Clinical Dashboard grafici umore</li>
+          <li>Registro attività dettagliato</li>
+          <li>Note cliniche archiviate</li>
+          <li>Accesso solo ai pazienti assegnati</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">🛡️</div>
+        <div class="role-name">L'Amministratore</div>
+        <p class="role-desc">Controllo completo dell'installazione per il responsabile IT della struttura.</p>
+        <ul class="role-features">
+          <li>Gestione e assegnazione ruoli</li>
+          <li>Moderazione contenuti social</li>
+          <li>Pannello diagnostico real-time</li>
+          <li>Log di sistema completi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="funzionalita">
+  <div class="container">
+    <div class="section-label">Moduli principali</div>
+    <h2 class="section-title">Tecnologia al <em>servizio della cura</em>.</h2>
+    <div class="features-grid">
+      <div class="feature-item"><div class="feature-icon">📅</div><div class="feature-text"><h3>Agenda Cloud Real-time</h3><p>Sincronizzazione bidirezionale istantanea tra paziente e caregiver via WebSocket. Zero latenza, zero refresh.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">😊</div><div class="feature-text"><h3>Mood Tracker Clinico</h3><p>Registrazione umore con un tap, storico graficato nel tempo, visibile al medico nella Clinical Dashboard.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">🎙️</div><div class="feature-text"><h3>Messaggi Vocali Vocal-First</h3><p>Player audio con waveform dinamica. Ideale per chi non riesce a digitare. Storage sicuro su Supabase.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">🟢</div><div class="feature-text"><h3>Presenza Online Live</h3><p>Il caregiver vede in tempo reale se il paziente è connesso. Heartbeat diagnostico per anomalie di accesso.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">📱</div><div class="feature-text"><h3>PWA — Nessuno Store</h3><p>Installabile su Android e iOS dal browser. Notifiche push native senza pubblicazione sugli store.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">🔐</div><div class="feature-text"><h3>Sicurezza RLS</h3><p>Row Level Security su Supabase/PostgreSQL. Permessi nel database: impossibile aggirarli anche con bug nel frontend.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">🆘</div><div class="feature-text"><h3>Tasto SOS</h3><p>Accesso immediato ai soccorsi. Un tap, nessun menu, nessuna schermata intermedia.</p></div></div>
+      <div class="feature-item"><div class="feature-icon">🐛</div><div class="feature-text"><h3>Diagnostica Integrata</h3><p>Un tap invia report tecnici completi all'admin. Nessun utente deve descrivere il problema a parole.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="screenshots">
+  <div class="container">
+    <div class="section-label">Interfaccia reale</div>
+    <h2 class="section-title">Semplice per <em>design</em>.</h2>
+    <p class="section-desc">Ogni schermata è progettata con un solo principio: meno scelte cognitive, più autonomia reale per l'utente.</p>
+    <div class="screenshots-row">
+      <div class="screenshot-card"><div class="screenshot-mockup">🔑</div><h4>Login</h4><p>"Bentornat*" — inclusivo dal primo secondo</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup">🏠</div><h4>Home Paziente</h4><p>Agenda, umore e pillola di benessere</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup">💬</div><h4>Chat Vocale</h4><p>Waveform dinamica, nessun testo da digitare</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup">👤</div><h4>Profilo</h4><p>Attività recenti e impostazioni</p></div>
+      <div class="screenshot-card"><div class="screenshot-mockup">🐛</div><h4>Debug Panel</h4><p>Report tecnico con un tap</p></div>
+    </div>
+    <p style="margin-top:1.5rem;font-size:.82rem;color:var(--testo-soft)">← Scorri per vedere tutte le schermate</p>
+  </div>
+</section>
+
+<section class="tester" id="tester">
+  <div class="container">
+    <div class="section-label">Partecipa</div>
+    <h2 class="section-title">Cerchiamo <em>tester</em>.</h2>
+    <div class="tester-box">
+      <div class="tester-left">
+        <h2>Il tuo feedback <em>cambia l'app</em>.</h2>
+        <p>Siamo in fase beta attiva. Ogni segnalazione migliora concretamente l'esperienza di pazienti, caregiver e medici. L'app è live, gratuita e non richiede installazione.</p>
+        <div class="tester-tags">
+          <span class="tester-tag">Caregiver familiari</span>
+          <span class="tester-tag">Medici di base</span>
+          <span class="tester-tag">Psicologi</span>
+          <span class="tester-tag">Psichiatri</span>
+          <span class="tester-tag">Operatori RSA</span>
+          <span class="tester-tag">Responsabili IT sanitari</span>
+          <span class="tester-tag">Sviluppatori</span>
+        </div>
+        <a href="https://alzheimerapp-chi.vercel.app/" target="_blank" rel="noopener" class="btn-white">🚀 Inizia a testare ora</a>
+      </div>
+      <div class="tester-right">
+        <ul class="tester-steps">
+          <li><div class="step-num">1</div><div class="step-text"><strong>Vai su alzheimerapp-chi.vercel.app</strong> — nessuna installazione, funziona nel browser.</div></li>
+          <li><div class="step-num">2</div><div class="step-text"><strong>Crea un account gratuito</strong> — in meno di un minuto sei dentro l'app.</div></li>
+          <li><div class="step-num">3</div><div class="step-text"><strong>Esplora liberamente</strong> — agenda, mood tracker, chat, profilo, pannello debug.</div></li>
+          <li><div class="step-num">4</div><div class="step-text"><strong>Invia il tuo feedback</strong> — usa il pannello debug o scrivi a <strong>admindany@gmail.com</strong>.</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="investors" id="investitori">
+  <div class="container">
+    <div class="section-label">Supporta il progetto</div>
+    <h2 class="section-title">Investitori e <em>finanziamenti</em>.</h2>
+    <p class="section-desc">Memora ha impatto sociale misurabile in un mercato in crescita costante. Siamo aperti a entrambe le strade.</p>
+    <div class="investors-grid">
+      <div class="investor-card">
+        <span class="investor-type type-private">Investitori Privati</span>
+        <h3>Healthtech &amp; Impact</h3>
+        <p>Un prodotto live, uno stack moderno e scalabile, un team dedicato e un mercato da 1,2 milioni di persone solo in Italia. Non è un'idea su carta.</p>
+        <ul class="investor-list">
+          <li>Angel investor nel settore healthtech</li>
+          <li>Family office con focus impatto sociale</li>
+          <li>Fondi early-stage salute digitale</li>
+          <li>Acceleratori (PoliHub, Cariplo Factory, H-Farm)</li>
+        </ul>
+      </div>
+      <div class="investor-card">
+        <span class="investor-type type-public">Bandi &amp; Finanziamenti</span>
+        <h3>Pubblico &amp; Istituzionale</h3>
+        <p>Memora si inserisce in diverse linee di finanziamento pubblico italiane ed europee per salute digitale e assistenza agli anziani.</p>
+        <ul class="investor-list">
+          <li>PNRR — Missione 6 Salute digitale</li>
+          <li>MIMIT — Fondo Nazionale Innovazione</li>
+          <li>Horizon Europe — Cluster Salute</li>
+          <li>Fondazioni bancarie (Cariplo, CSP, CRT)</li>
+          <li>Bandi regionali innovazione sanitaria</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem">
+      <p style="color:var(--testo-soft);font-size:.9rem;margin-bottom:1.2rem">Interessato a valutare il progetto? Scriviamo insieme.</p>
+      <a href="mailto:admindany@gmail.com" class="btn-primary">📩 admindany@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="legale">
+  <div class="container">
+    <div class="section-label">Trasparenza</div>
+    <h2 class="section-title">Informazioni <em>legali</em>.</h2>
+    <p class="section-desc">Memora tratta dati sensibili in ambito sanitario nel pieno rispetto del GDPR EU 2016/679.</p>
+    <div class="legal-grid">
+      <div class="legal-card"><div class="legal-icon">📄</div><h4>Privacy Policy</h4><p>Informativa completa sul trattamento dei dati personali ai sensi del GDPR.</p><a href="mailto:admindany@gmail.com">Richiedi documento →</a></div>
+      <div class="legal-card"><div class="legal-icon">🍪</div><h4>Cookie Policy</h4><p>Solo cookie tecnici necessari al funzionamento. Nessun cookie di profilazione o tracciamento.</p><a href="mailto:admindany@gmail.com">Dettagli →</a></div>
+      <div class="legal-card"><div class="legal-icon">🔐</div><h4>Sicurezza Dati</h4><p>Database PostgreSQL con RLS. I dati sanitari non escono dall'istanza Supabase dedicata.</p><a href="mailto:admindany@gmail.com">Approfondisci →</a></div>
+      <div class="legal-card"><div class="legal-icon">⚖️</div><h4>Termini di Utilizzo</h4><p>L'accesso alla beta è gratuito e non vincolante. L'app è fornita "as is" durante la fase di test.</p><a href="mailto:admindany@gmail.com">Leggi termini →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contatti">
+  <div class="container">
+    <h2>Parliamo di <em>Memora</em>.</h2>
+    <p>Sei un tester, un operatore sanitario, un investitore o una struttura interessata?<br>Ogni messaggio riceve una risposta diretta e personale.</p>
+    <a href="mailto:admindany@gmail.com" class="contact-email">📧 admindany@gmail.com</a>
+    <p class="contact-note">Risposta garantita entro 48 ore · Nessun bot · Nessuna newsletter automatica</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">🧠 <strong>Memora</strong> — App per l'assistenza Alzheimer</div>
+  <div class="footer-links">
+    <a href="#ruoli">Funzionalità</a>
+    <a href="#tester">Tester</a>
+    <a href="#investitori">Investitori</a>
+    <a href="#legale">Privacy</a>
+    <a href="https://www.cosmonet.info" target="_blank">CosmoNet</a>
+    <a href="mailto:admindany@gmail.com">Contatti</a>
+  </div>
+  <p class="footer-copy">© 2026 Daniele Spalletti — Sviluppato per cosmonet.info · Design: Michele Mosca · Ispirato a Airalzh Onlus</p>
+</footer>
+
+</body>
+</html>
