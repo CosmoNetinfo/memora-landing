@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.vscode/
+*.code-workspace
+memora-landing-page nuova/
+assets/
+img/
+backup_old_version/
