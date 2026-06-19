@@ -1,22 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  --color-memora-primary: #92487A;
-  --color-memora-primary-dark: #6d3560;
-  --color-memora-primary-soft: #FFC4C4;
-  --color-memora-accent: #EE6983;
-  --color-memora-bg: #FFF0F2;
-  --color-memora-bg-secondary: #FFE0E2;
+  --color-memora-primary: #9C69A7;
+  --color-memora-primary-dark: #4A304F;
+  --color-memora-lavender: #A88ABE;
+  --color-memora-lilla-soft: #D4C4E0;
+  --color-memora-bg: #F7F3FA;
+  --color-memora-bg-secondary: #EDE6F3;
+  --color-memora-header: #FFF0F2;
+  --color-memora-mood-happy: #52A88E;
+  --color-memora-mood-neutral: #C9920A;
+  --color-memora-mood-sad: #DC4545;
 
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-logo: "Lexend", ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  @apply bg-memora-bg text-gray-900;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-memora-bg text-memora-primary-dark antialiased;
+}
+
+.font-logo {
+  font-family: var(--font-logo);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-xl focus:bg-memora-primary focus:text-white focus:font-medium focus:shadow-lg;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-2 outline-offset-2 outline-memora-primary;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07), 0 2px 10px rgba(156, 105, 167, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
