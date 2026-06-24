@@ -52,4 +52,4 @@ Sviluppato da **Daniele Spalletti** per [CosmoNet](https://www.cosmonet.info).
 Design a cura di **Michele Mosca**.
 
 ---
-*Progetto ispirato alla missione di Airalzh Onlus per la ricerca sull'Alzheimer.*
+*Progetto ispirato alla missione di Airalzh ETS per la ricerca sull'Alzheimer.*

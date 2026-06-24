@@ -6,7 +6,7 @@ const legalContent: Record<string, { title: string; body: string[] }> = {
     title: 'Privacy Policy',
     body: [
       'Memora tratta dati personali e, ove applicabile, dati relativi alla salute nel rispetto del Regolamento UE 2016/679 (GDPR).',
-      'Titolare del trattamento: Michele Mosca e Daniele Spalletti, in collaborazione con Airalzh Onlus.',
+      'Titolare del trattamento: Michele Mosca e Daniele Spalletti, con il contributo di Airalzh ETS.',
       'I dati raccolti tramite l\'app (profilo, umore, post, attività) sono conservati su infrastruttura Supabase con accesso controllato per ruolo.',
       'Per esercitare i diritti (accesso, rettifica, cancellazione) scrivi a info@airalzh.it.',
       'Questa pagina è un placeholder. L\'informativa completa sarà integrata con Iubenda o documento legale dedicato.',

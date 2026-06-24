@@ -96,7 +96,7 @@ export const pageMeta = {
   home: {
     title: 'Memora — PWA per l\'assistenza Alzheimer',
     description:
-      'Progetto di tesi NID, Università di Perugia 2026. PWA per famiglie, caregiver e medici — in collaborazione con Airalzh Onlus.',
+      'Progetto di tesi NID, Università di Perugia 2026. PWA per famiglie, caregiver e medici — con il contributo di Airalzh ETS.',
   },
   famiglie: {
     title: 'Memora per le famiglie — Caregiver e familiari',
@@ -112,6 +112,6 @@ export const pageMeta = {
   },
   contatti: {
     title: 'Contatti — Memora',
-    description: 'Scrivi al team Memora o ad Airalzh Onlus. Beta, partnership e informazioni sulla tesi.',
+    description: 'Scrivi al team Memora o ad Airalzh ETS. Beta, partnership e informazioni sulla tesi.',
   },
 } as const;

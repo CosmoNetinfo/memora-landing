@@ -109,7 +109,7 @@ export default function Contatti() {
                     <a href={`mailto:${AIRALZH_EMAIL}`} className="text-memora-primary hover:underline font-medium">
                       {AIRALZH_EMAIL}
                     </a>
-                    <span className="text-gray-600"> — Airalzh Onlus</span>
+                    <span className="text-gray-600"> — Airalzh ETS</span>
                   </dd>
                 </div>
                 <div>

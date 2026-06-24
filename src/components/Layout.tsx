@@ -10,9 +10,9 @@ export default function Layout() {
         Vai al contenuto
       </a>
       <div className="bg-memora-primary/5 text-center py-2 text-sm text-memora-primary-dark border-b border-memora-primary/10">
-        In collaborazione con{' '}
+        Con il contributo di{' '}
         <a href={AIRALZH_URL} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline">
-          Airalzh Onlus
+          Airalzh ETS
         </a>{' '}
         — Associazione Italiana Ricerca Alzheimer
       </div>

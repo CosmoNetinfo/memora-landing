@@ -34,7 +34,7 @@ export default function Home() {
             </p>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Agenda, umore, chat vocali e monitoraggio clinico — sincronizzati tra paziente, famiglia e medico.
-              Progetto di {TEAM.design.name} e {TEAM.dev.name}, con <strong>Airalzh Onlus</strong>.
+              Progetto di {TEAM.design.name} e {TEAM.dev.name}, con il contributo di <strong>Airalzh ETS</strong>.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <PrimaryButton href={APP_URL} external>
@@ -229,7 +229,7 @@ export default function Home() {
             <span className="text-sm">{THESIS.label}</span>
           </p>
           <p className="text-gray-600 text-sm mb-6">
-            In collaborazione con <strong>Airalzh Onlus</strong> — associazione di riferimento, fondata nel 2014,
+            Con il contributo di <strong>Airalzh ETS</strong> — associazione di riferimento, fondata nel 2014,
             con oltre 60 ricercatori sostenuti in Italia. Airalzh finanzia la ricerca; Memora aiuta le famiglie ogni giorno.
           </p>
           <a href={AIRALZH_URL} target="_blank" rel="noopener noreferrer" className="text-memora-primary font-medium hover:underline">

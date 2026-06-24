@@ -40,7 +40,7 @@ export default function Investitori() {
           badge="Per sponsor e partner"
           title="Un progetto di tesi,"
           accent="con un mercato reale."
-          subtitle={`Memora è la tesi NID di ${TEAM.design.name} e ${TEAM.dev.name} (${THESIS.university}, ${THESIS.year}): una PWA per l'assistenza domiciliare nell'Alzheimer, sviluppata con Airalzh Onlus.`}
+          subtitle={`Memora è la tesi NID di ${TEAM.design.name} e ${TEAM.dev.name} (${THESIS.university}, ${THESIS.year}): una PWA per l'assistenza domiciliare nell'Alzheimer, sviluppata con il contributo di Airalzh ETS.`}
         >
           <PrimaryButton to="/contatti">Scrivici per partnership</PrimaryButton>
         </PageHero>
@@ -70,7 +70,7 @@ export default function Investitori() {
           <p className="text-center text-sm text-gray-600 mt-4">
             Fonti: OMS · ISS ·{' '}
             <a href={AIRALZH_URL} target="_blank" rel="noopener noreferrer" className="text-memora-primary hover:underline">
-              Airalzh Onlus
+              Airalzh ETS
             </a>
           </p>
         </section>

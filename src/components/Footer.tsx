@@ -16,7 +16,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="bg-white rounded-2xl px-5 py-2.5 hover:opacity-95 transition-opacity shrink-0"
           >
-            <img src="/airalzh-logo.png" alt="Airalzh Onlus" className="h-14 w-auto" />
+            <img src="/airalzh-logo.png" alt="Airalzh ETS" className="h-14 w-auto" />
           </a>
         </div>
 
@@ -24,9 +24,9 @@ export default function Footer() {
           <strong>Michele Mosca</strong> — UI/UX · <strong>Daniele Spalletti</strong> — Developer
         </p>
         <p className="text-white/80 text-sm mb-4">
-          In collaborazione con{' '}
+          Con il contributo di{' '}
           <a href={AIRALZH_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
-            Airalzh Onlus
+            Airalzh ETS
           </a>
         </p>
         <p className="text-white/70 text-xs">© {new Date().getFullYear()} Memora</p>
