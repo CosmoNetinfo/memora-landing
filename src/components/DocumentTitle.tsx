@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const DEFAULT_TITLE = 'Memora — Assistenza Alzheimer Digitale';
 const DEFAULT_DESCRIPTION =
-  "Memora — PWA per l'assistenza Alzheimer. Progetto di tesi NID, Università di Perugia 2026. Con il contributo di Airalzh ETS.";
+  "Memora — PWA per l'assistenza Alzheimer. Progetto di tesi. Con il contributo di Airalzh ETS.";
 
 export function DocumentTitle({ title, description }: { title: string; description?: string }) {
   useEffect(() => {

@@ -26,7 +26,7 @@ export default function Investitori() {
   const stack = ['React', 'Vite', 'Supabase Realtime', 'Recharts', 'Capacitor', 'OneSignal'];
 
   const sponsorAreas = [
-    'Visibilità come partner del progetto di tesi NID',
+    'Visibilità come partner del progetto di tesi',
     'Accesso anticipato al prototipo e ai dati di utilizzo (anonimizzati)',
     'Co-branding su materiali per famiglie e operatori',
     'Priorità nel percorso B2B (RSA, ASL)',
@@ -40,7 +40,7 @@ export default function Investitori() {
           badge="Per sponsor e partner"
           title="Un progetto di tesi,"
           accent="con un mercato reale."
-          subtitle={`Memora è la tesi NID di ${TEAM.design.name} e ${TEAM.dev.name} (${THESIS.university}, ${THESIS.year}): una PWA per l'assistenza domiciliare nell'Alzheimer, sviluppata con il contributo di Airalzh ETS.`}
+          subtitle={`Memora è la tesi di ${TEAM.design.name} e ${TEAM.dev.name}: una PWA per l'assistenza domiciliare nell'Alzheimer, sviluppata con il contributo di Airalzh ETS.`}
         >
           <PrimaryButton to="/contatti">Scrivici per partnership</PrimaryButton>
         </PageHero>
