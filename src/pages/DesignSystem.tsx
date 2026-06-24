@@ -43,7 +43,6 @@ export default function DesignSystem() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <BackLink fallback="/contatti" label="Contatti" />
       <PageHero
-        badge="Design System · Booklet v2"
         title="Il linguaggio visivo"
         accent="di Memora."
         subtitle="Palette Airalzh, tipografia, icona e principi — documentazione ufficiale del progetto."

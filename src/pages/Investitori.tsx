@@ -113,8 +113,8 @@ export default function Investitori() {
             <p className="text-gray-600 text-sm mt-4">{THESIS.label}</p>
           </div>
           <div>
-            <h2 className="text-2xl font-serif font-bold text-memora-primary-dark mb-4">Partner Airalzh</h2>
-            <img src="/airalzh-logo.png" alt="Airalzh" className="h-12 mb-3" />
+            <h2 className="text-2xl font-serif font-bold text-memora-primary-dark mb-4">Con il contributo di Airalzh ETS</h2>
+            <img src="/airalzh-logo.png" alt="Airalzh ETS" className="h-12 mb-3" />
             <p className="text-gray-600 leading-relaxed text-sm">
               Fondata nel <strong>{airalzhFacts.founded}</strong>. <strong>{airalzhFacts.researchers}</strong> ricercatori
               sostenuti, <strong>{airalzhFacts.centers}</strong> centri nella rete. Promuove la ricerca
