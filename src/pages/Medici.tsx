@@ -72,12 +72,12 @@ export default function Medici() {
         </div>
 
         <div className="text-center max-w-2xl mx-auto">
-          <img src="/airalzh-logo.png" alt="Airalzh Onlus" className="h-14 mx-auto mb-4" />
+          <img src="/airalzh-logo.png" alt="Airalzh ETS" className="h-14 mx-auto mb-4" />
           <h2 className="text-xl font-bold text-memora-primary-dark mb-3">Partner Airalzh</h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-4">
             Partner scientifico qualificato nella ricerca sull'Alzheimer.{' '}
             <a href={AIRALZH_URL} target="_blank" rel="noopener noreferrer" className="text-memora-primary hover:underline">
-              Airalzh Onlus
+              Airalzh ETS
             </a>{' '}
             promuove la ricerca medico-scientifica su scala nazionale dal 2014.
           </p>
