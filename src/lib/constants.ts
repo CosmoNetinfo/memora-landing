@@ -4,10 +4,10 @@ export const AIRALZH_EMAIL = 'info@airalzh.it';
 export const CONTACT_EMAIL = AIRALZH_EMAIL;
 
 export const THESIS = {
-  program: 'NID (Nuovo Istituto Design)',
+  program: '',
   university: '',
   year: '',
-  label: 'Progetto di tesi NID (Nuovo Istituto Design)',
+  label: 'Progetto personale',
 } as const;
 
 export const TEAM = {
@@ -96,7 +96,7 @@ export const pageMeta = {
   home: {
     title: 'Memora — PWA per l\'assistenza Alzheimer',
     description:
-      'Progetto di tesi NID (Nuovo Istituto Design). PWA per famiglie, caregiver e medici — con il contributo di Airalzh ETS.',
+      'Progetto personale. PWA per famiglie, caregiver e medici — con il contributo di Airalzh ETS.',
   },
   famiglie: {
     title: 'Memora per le famiglie — Caregiver e familiari',
@@ -108,10 +108,10 @@ export const pageMeta = {
   },
   investitori: {
     title: 'Memora — Sponsor e partner',
-    description: 'Opportunità di partnership e sponsorizzazione per Memora. Progetto di tesi NID (Nuovo Istituto Design).',
+    description: 'Opportunità di partnership e sponsorizzazione per Memora. Progetto personale.',
   },
   contatti: {
     title: 'Contatti — Memora',
-    description: 'Scrivi al team Memora o ad Airalzh ETS. Beta, partnership e informazioni sulla tesi.',
+    description: 'Scrivi al team Memora o ad Airalzh ETS. Beta, partnership e informazioni sul progetto.',
   },
 } as const;

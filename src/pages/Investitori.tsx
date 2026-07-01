@@ -26,7 +26,7 @@ export default function Investitori() {
   const stack = ['React', 'Vite', 'Supabase Realtime', 'Recharts', 'Capacitor', 'OneSignal'];
 
   const sponsorAreas = [
-    'Visibilità come partner del progetto di tesi NID (Nuovo Istituto Design)',
+    'Visibilità come partner del progetto personale',
     'Accesso anticipato al prototipo e ai dati di utilizzo (anonimizzati)',
     'Co-branding su materiali per famiglie e operatori',
     'Priorità nel percorso B2B (RSA, ASL)',
@@ -38,9 +38,9 @@ export default function Investitori() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <PageHero
           badge="Per sponsor e partner"
-          title="Un progetto di tesi,"
+          title="Un progetto personale,"
           accent="con un mercato reale."
-          subtitle={`Memora è la tesi NID (Nuovo Istituto Design) di ${TEAM.design.name} e ${TEAM.dev.name}: una PWA per l'assistenza domiciliare nell'Alzheimer, sviluppata con il contributo di Airalzh ETS.`}
+          subtitle={`Memora è il progetto personale di ${TEAM.design.name} e ${TEAM.dev.name}: una PWA per l'assistenza domiciliare nell'Alzheimer, sviluppata con il contributo di Airalzh ETS.`}
         >
           <PrimaryButton to="/contatti">Scrivici per partnership</PrimaryButton>
         </PageHero>
@@ -51,7 +51,7 @@ export default function Investitori() {
             <span>{THESIS.label}</span>
           </div>
           <p className="text-gray-600 leading-relaxed">
-            Il giorno della discussione presenteremo il prototipo funzionante, le scelte di design e i risultati del
+            Presentiamo il prototipo funzionante, le scelte di design e i risultati del
             percorso. Per aziende e enti che vogliono sostenere il progetto, questa pagina riassume mercato, prodotto
             e possibilità di collaborazione.
           </p>

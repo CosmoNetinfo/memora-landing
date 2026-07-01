@@ -37,7 +37,7 @@ export default function Contatti() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <PageHero
           title="Scrivici"
-          subtitle="Famiglia, medico, sponsor o curioso sulla tesi — rispondiamo entro 48 ore lavorative."
+          subtitle="Famiglia, medico, sponsor o curioso sul progetto — rispondiamo entro 48 ore lavorative."
         />
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -64,7 +64,7 @@ export default function Contatti() {
                     <option value="caregiver">Caregiver / Familiare</option>
                     <option value="medico">Medico / Operatore sanitario</option>
                     <option value="sponsor">Sponsor / Partner</option>
-                    <option value="tesi">Commissione / Discussione tesi</option>
+                    <option value="progetto">Interessato al progetto / Altro</option>
                     <option value="altro">Altro</option>
                   </select>
                 </div>
